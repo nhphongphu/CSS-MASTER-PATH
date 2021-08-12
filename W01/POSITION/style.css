@@ -1,0 +1,82 @@
+select {
+    outline: none;
+    font-size: 12px;
+    line-height: 1.5;
+    font-family: "Poppins", sans-serif;
+}
+
+input {
+    line-height: normal;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    padding: 20px;
+}
+
+.position {
+    /* Static: giá trị mặc định, không thể sử dụng các Top-left ... */
+    /* Relative: để con Absolut chạy theo */
+    /* Absolute: thường sẽ chạy theo phần tử cha */
+    /* Fixed: cố định vị trí */
+}
+
+.wrapper {
+    width: 100%;
+    height: 400px;
+    background-color: #000000;
+    color: #fff;
+}
+
+.boxed {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: #fff;
+    top: 50px;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    /* TranslateX: trừ 50% của width Boxed */
+    transform: translateX(-50%);
+}
+
+.dropdown{
+    width: 400px;
+    font-size: 20px;
+    position: relative;
+}
+.dropdown-select{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.dropdown-list{
+    border: 1px solid #eee;
+    margin-top: 20px;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    position: absolute;
+}
+.dropdown-item{
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.dropdown:hover .dropdown-list {
+    opacity: 1;
+    visibility: visible;
+}

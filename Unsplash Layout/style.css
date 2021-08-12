@@ -1,0 +1,29 @@
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.post-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container {
+    width: 100%;
+}
+.layout {
+    width: 1117px;
+    --column-space: 24px;
+    --column: 3;
+    display: grid;
+    grid-gap: var(--column-space);
+    grid-template-columns: repeat(var(--column), minmax(0,1fr));
+    align-items: start;
+    margin: 0 auto;
+}
+.layout-column {
+    display: grid;
+    row-gap: var(--column-space);
+    grid-template-rows: minmax(0,1fr);
+}
+
